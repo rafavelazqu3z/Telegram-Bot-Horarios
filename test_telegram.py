@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 import telebot
-from config import TELEGRAM_TOKEN
+TELEGRAM_TOKEN = "5972210806:AAHw3K7xxAYT_ZvPxo5HnQwEU0TXKtPz2N4"
 from PIL import Image
 
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
 @bot.message_handler(commands=["start", "ayuda", "help"])
 def handle_start_command(message):
-    bot.reply_to(message, "Para recibir los horarios ingrese la linea de BUS Ej: 6a habil, 6r6 sabado, 11a domingo")
+    bot.reply_to(message, "Para recibir los horarios ingrese Horarios")
 
 @bot.message_handler(func=lambda message: message.text == "Horarios")
 def send_horarios(message):
