@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import telebot
 from config import TELEGRAM_TOKEN
 from PIL import Image
